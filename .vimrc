@@ -3,3 +3,8 @@ set showcmd
 set cursorline
 set laststatus=2
 syntax enable
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set smartindent
+set list
