@@ -21,3 +21,17 @@ if !(type sensors > /dev/null 2>&1); then
         sudo apt install -y lm-sensors
     fi
 fi
+
+if !(type rustup > /dev/null 2>&1); then
+    read -p "Do you need rustup? (y/n) :" YN
+    if [ "$YN" = "y" ]; then
+        bash rust/install.sh
+    fi
+fi
+
+if !(type go > /dev/null 2>&1); then
+    read -p "Do you need go? (y/n) :" YN
+    if [ "$YN" = "y" ]; then
+        sudo apt install -y golang
+    fi
+fi
