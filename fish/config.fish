@@ -6,7 +6,7 @@ set -x EDITOR "/usr/bin/vim"
 
 function fls
     ls -l | head -n 1
-    ls -l | sed -e '1d' | awk '{printf "%10.2f[MB] ", $5/(1024*1024)}
+    ls -lh | sed -e '1d' | awk '{printf "%10s ", $5}
                                { printf "%3s ", $6}{ printf "%2d ", $7 }
                                { printf "%5s ", $8 }
                                {
