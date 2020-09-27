@@ -7,6 +7,10 @@ if !(type fish > /dev/null 2>&1); then
     bash fish/install.sh
 fi
 
+if !(type tmux > /dev/null 2>&1); then
+    sudo apt install -y tmux
+fi
+
 if [ ! -d $HOME/.nvm ]; then
     bash nvm/install.sh
 fi
