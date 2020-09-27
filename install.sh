@@ -16,5 +16,8 @@ if !(type vim > /dev/null 2>&1); then
 fi
 
 if !(type sensors > /dev/null 2>&1); then
-    sudo apt install -y lm-sensors
+    read -p "Do you need sensors? (y/n) :" YN
+    if [ "$YN" = "y" ]; then
+        sudo apt install -y lm-sensors
+    fi
 fi
