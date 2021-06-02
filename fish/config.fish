@@ -2,6 +2,7 @@ set -x PATH $PATH "$HOME/bin"
 set -x PATH $PATH "/usr/sbin"
 set -x PATH $PATH "$HOME/.local/bin"
 set -x PATH $PATH "$HOME/.cargo/bin"
+set -x PATH $PATH "$HOME/go/bin"
 set -x EDITOR "/usr/bin/vim"
 
 function fls
