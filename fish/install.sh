@@ -13,4 +13,4 @@ do
   ln -sf `pwd`/functions/$f ~/.config/fish/functions/$f
 done
 
-fish -c fisher
+cat fishfile | fish -c fisher install
